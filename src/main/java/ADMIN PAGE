@@ -1,0 +1,198 @@
+package com.mycompany.test;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class AdminPage extends JFrame {
+    private JTabbedPane tabbedPane;
+    private JPanel userManagementPanel;
+    private JPanel carManagementPanel;
+    private JPanel rentalManagementPanel;
+
+    private void openAdminPage() {
+    JFrame adminWindow = new JFrame();
+    adminWindow.setSize(800, 600);
+    adminWindow.setLocationRelativeTo(null); 
+    adminWindow.setTitle("Admin Page");
+
+    JLabel adminLabel = new JLabel("Welcome to the Admin Page");
+    adminLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    adminWindow.add(adminLabel);
+
+    adminWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+    adminWindow.setVisible(true);
+}
+    
+    public AdminPage() {
+        setTitle("Admin Page");
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+        
+        tabbedPane = new JTabbedPane();
+        tabbedPane.setBounds(10, 10, 760, 540);
+        add(tabbedPane);
+
+        userManagementPanel = new JPanel();
+        userManagementPanel.setLayout(null);
+        tabbedPane.addTab("User Management", userManagementPanel);
+
+        JButton addUserButton = new JButton("Add User");
+        addUserButton.setBounds(10, 10, 100, 30);
+        userManagementPanel.add(addUserButton);
+
+        JButton editUserButton = new JButton("Edit User");
+        editUserButton.setBounds(120, 10, 100, 30);
+        userManagementPanel.add(editUserButton);
+
+        JButton deleteUserButton = new JButton("Delete User");
+        deleteUserButton.setBounds(230, 10, 100, 30);
+        userManagementPanel.add(deleteUserButton);
+
+        carManagementPanel = new JPanel();
+        carManagementPanel.setLayout(null);
+        tabbedPane.addTab("Car Management", carManagementPanel);
+
+        JButton addCarButton = new JButton("Add Car");
+        addCarButton.setBounds(10, 10, 100, 30);
+        carManagementPanel.add(addCarButton);
+
+        JButton editCarButton = new JButton("Edit Car");
+        editCarButton.setBounds(120, 10, 100, 30);
+        carManagementPanel.add(editCarButton);
+
+        JButton deleteCarButton = new JButton("Delete Car");
+        deleteCarButton.setBounds(230, 10, 100, 30);
+        carManagementPanel.add(deleteCarButton);
+
+        rentalManagementPanel = new JPanel();
+        rentalManagementPanel.setLayout(null);
+        tabbedPane.addTab("Rental Management", rentalManagementPanel);
+
+        JButton viewRentalsButton = new JButton("View Rentals");
+        viewRentalsButton.setBounds(10, 10, 120, 30);
+        rentalManagementPanel.add(viewRentalsButton);
+
+        JButton approveRentalButton = new JButton("Approve Rental");
+        approveRentalButton.setBounds(140, 10, 150, 30);
+        rentalManagementPanel.add(approveRentalButton);
+
+        JButton rejectRentalButton = new JButton("Reject Rental");
+        rejectRentalButton.setBounds(300, 10, 150, 30);
+        rentalManagementPanel.add(rejectRentalButton);
+
+        addUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleAddUser();
+            }
+        });
+
+        editUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleEditUser();
+            }
+        });
+
+        deleteUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleDeleteUser();
+            }
+        });
+
+        addCarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleAddCar();
+            }
+        });
+
+        editCarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleEditCar();
+            }
+        });
+
+        deleteCarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleDeleteCar();
+            }
+        });
+
+        viewRentalsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleViewRentals();
+            }
+        });
+
+        approveRentalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleApproveRental();
+            }
+        });
+
+        rejectRentalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleRejectRental();
+            }
+        });
+    }
+
+    private void handleAddUser() {
+        JOptionPane.showMessageDialog(this, "Add User button clicked");
+    }
+
+    private void handleEditUser() {
+        JOptionPane.showMessageDialog(this, "Edit User button clicked");
+    }
+
+    private void handleDeleteUser() {
+        JOptionPane.showMessageDialog(this, "Delete User button clicked");
+    }
+
+    private void handleAddCar() {
+        JOptionPane.showMessageDialog(this, "Add Car button clicked");
+    }
+
+    private void handleEditCar() {
+        JOptionPane.showMessageDialog(this, "Edit Car button clicked");
+    }
+
+    private void handleDeleteCar() {
+        JOptionPane.showMessageDialog(this, "Delete Car button clicked");
+    }
+
+    private void handleViewRentals() {
+        JOptionPane.showMessageDialog(this, "View Rentals button clicked");
+    }
+
+    private void handleApproveRental() {
+        JOptionPane.showMessageDialog(this, "Approve Rental button clicked");
+    }
+
+    private void handleRejectRental() {
+        JOptionPane.showMessageDialog(this, "Reject Rental button clicked");
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new AdminPage().setVisible(true);
+            }
+        });
+    }
+    
+    public void actionPerformed(ActionEvent e){
+           
+           Test.x.window.setVisible(true);
+        }
+}
