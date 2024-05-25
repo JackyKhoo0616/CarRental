@@ -1,0 +1,9 @@
+ABC 313: vios:  Yes :  MYR 12
+ABC 123: toyota: Yes :  MYR 123
+ABC 223: honda:  Yes : MYR 543
+ABC 456 :  toyota : Yes : MYR 123
+ABC 1234 : toyota : Yes : MYR 456
+ABC 1232 : vios : Yes : MYR 34
+ABC 2345 : honda : Yes:  MYR 123
+ABC 1245 : ferari : no : MYR 1234
+ABC 1245 : bmw :  no : MYR 1234
